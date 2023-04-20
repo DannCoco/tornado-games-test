@@ -7,4 +7,7 @@
 /public/bundles/
 /var/
 /vendor/
+/docker/db
+/docker/redis-data
+/docker/redis.conf
 ###< symfony/framework-bundle ###
