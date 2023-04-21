@@ -23,8 +23,8 @@ final class Version20230420172513 extends AbstractMigration
             <<<SQL
                 CREATE TABLE Rates(
                     id INT NOT NULL AUTO_INCREMENT,
-                    base_currency INT NOT NULL,
-                    rate INT,
+                    base_currency VARCHAR(4) NOT NULL,
+                    rate JSON,
                     PRIMARY KEY (id)
                 );
             SQL
