@@ -22,3 +22,24 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+    Predis\Client: '@snc_redis.default'
+
+     # Use Case Currency
+    App\Application\List\CurrencyListUseCase:
+        autowire: true
+    App\Application\Find\CurrencyFindUseCase:
+        autowire: true
+    App\Application\Save\CurrencySaveUseCase:
+        autowire: true
+
+    # Use Case Rate
+    App\Application\Find\RateFindUseCase:
+        autowire: true
+    App\Application\Save\RateSaveUseCase:
+        autowire: true
+
+    # Repositories
+    App\Infrastructure\Repository\CurrencyRepository:
+        autowire: true
+    App\Infrastructure\Repository\Redis\RateRepository:
+        autowire: true
