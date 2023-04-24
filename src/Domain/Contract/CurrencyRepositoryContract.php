@@ -9,7 +9,7 @@ interface CurrencyRepositoryContract
      * @param $base string
      * 
      */
-    public function findByID(string $base): ?array;
+    public function findByID(string $base): ?string;
 
     /**
      * @param $base string

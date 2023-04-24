@@ -9,12 +9,11 @@ final class CurrencyRepository implements CurrencyRepositoryContract
 {
     public function __construct(private Connection $connection)
     {
-        
     }
 
-    public function findByID(string $base): ?array
+    public function findByID(string $base): ?string
     {
-        return [];
+        return $this->connection->fetchOne("SELECT rate FROM currencies WHERE base = '$base'");
     }    
 
     public function save(string $base, string $rate): bool

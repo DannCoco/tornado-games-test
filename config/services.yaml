@@ -25,8 +25,6 @@ services:
     Predis\Client: '@snc_redis.default'
 
      # Use Case Currency
-    App\Application\List\CurrencyListUseCase:
-        autowire: true
     App\Application\Find\CurrencyFindUseCase:
         autowire: true
     App\Application\Save\CurrencySaveUseCase:

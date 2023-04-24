@@ -15,14 +15,9 @@ final class RateRepository implements RateRepositoryContract
      */
     const STATUS_OK = 'OK';
 
-    /**
-     * @var Client
-     */
-    private $redisClient;
 
-    public function __construct(Client $client) 
+    public function __construct(private Client $redisClient) 
     {
-        $this->redisClient = $client;
     }
 
     /**
